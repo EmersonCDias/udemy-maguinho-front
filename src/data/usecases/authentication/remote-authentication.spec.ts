@@ -8,14 +8,16 @@ import { InvalidCredentialsError } from '../../../domain/errors/invalid-crendent
 import { UnexpectedError } from '../../../domain/errors/unexpected-error'
 import { ServerError } from '../../../domain/errors/server-error'
 import { NotFoundError } from '../../../domain/errors/not-found-error'
+import { AuthenticationParams } from '../../../domain/usecases/authenticantion'
+import { AccountModel } from '../../../domain/models/account-model'
 
 type SutTypes = {
   sut: RemoteAuthentication
-  httpPostClientSpy: HttpPostClientSpy
+  httpPostClientSpy: HttpPostClientSpy<AuthenticationParams, AccountModel>
 }
 
 const makeSut = (url: string = faker.internet.url()): SutTypes => {
-  const httpPostClientSpy = new HttpPostClientSpy()
+  const httpPostClientSpy = new HttpPostClientSpy<AuthenticationParams, AccountModel>()
   const sut = new RemoteAuthentication(url, httpPostClientSpy) // sut = system under test. Tested object
 
   return {
