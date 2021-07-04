@@ -1,7 +1,7 @@
 import faker from 'faker'
 
 import { HttpPostClientSpy } from '../../_mocks/mock-http-client'
-import { mockAuthentication } from '../../../domain/_mocks/mock-authentication'
+import { mockAccountModel, mockAuthentication } from '../../../domain/_mocks/mock-account'
 import { RemoteAuthentication } from './remote-authentication'
 import { HttpStatusCode } from '../../protocols/http/http-response'
 import { InvalidCredentialsError } from '../../../domain/errors/invalid-crendentials-error'
@@ -92,5 +92,19 @@ describe('RemoteAuthentication', () => {
     const promise = sut.auth(mockAuthentication())
 
     await expect(promise).rejects.toThrow(new ServerError())
+  })
+
+  it('should return an AccountModel if HttpPostClient returns 200', async () => {
+    const { sut, httpPostClientSpy } = makeSut()
+    const httpResult = mockAccountModel()
+
+    httpPostClientSpy.response = {
+      statusCode: HttpStatusCode.ok,
+      body: httpResult
+    }
+
+    const account = await sut.auth(mockAuthentication())
+
+    await expect(account).toEqual(httpResult)
   })
 })
