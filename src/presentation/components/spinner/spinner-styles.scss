@@ -1,0 +1,17 @@
+@import "../../styles/colors";
+
+.spinner {
+  animation: spin 1s infinite linear;
+  color: $primaryLight;
+  font-size: 2em;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
