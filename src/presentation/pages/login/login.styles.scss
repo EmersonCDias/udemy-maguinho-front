@@ -1,31 +1,6 @@
 @import "../../styles/colors";
 
-* {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
-body {
-  background: $background;
-}
-
-button {
-  background-color: $primary;
-  color: $white;
-  border-radius: 8px;
-  font-size: 16px;
-  border: none;
-  line-height: 50px;
-  cursor: pointer;
-  transition: 0.3s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
 
 .login {
   height: 100vh;
@@ -65,8 +40,5 @@ button {
         text-decoration: underline;
       }
     }
-
-
   }
-
 }
