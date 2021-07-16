@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import { FaRegCheckCircle } from 'react-icons/fa'
 
-import Styles from './input.styles.scss'
+import Styles from './input-styles.scss'
 
 type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
