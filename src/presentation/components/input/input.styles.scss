@@ -1,0 +1,28 @@
+@import '../../styles/colors';
+
+.inputWrap {
+  position: relative;
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    position: relative;
+    border: 1px solid $primaryLight;
+    line-height: 40px;
+    border-radius: 4px;
+    padding: 0 10px;
+
+    &:focus {
+      outline-color: $primaryLight;
+    }
+  }
+
+  span {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    align-items: center;
+  }
+}
