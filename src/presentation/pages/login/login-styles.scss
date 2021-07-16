@@ -1,7 +1,5 @@
 @import "../../styles/colors";
 
-
-
 .login {
   height: 100vh;
   display: flex;
@@ -28,6 +26,16 @@
 
     .submit {
       margin-bottom: 20px;
+
+      &:disabled {
+        background-color: $disabledBackground;
+        color: $disabledColor;
+        cursor: not-allowed;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
 
     .link {
