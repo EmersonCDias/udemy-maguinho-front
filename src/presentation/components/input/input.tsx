@@ -1,5 +1,5 @@
 import React, { useContext, ReactElement } from 'react'
-import { FaRegCheckCircle } from 'react-icons/fa'
+import { FaRegCheckCircle, FaRegTimesCircle } from 'react-icons/fa'
 
 import FormContext from '../../contexts/form/form-context'
 import Styles from './input-styles.scss'
@@ -21,9 +21,12 @@ const Input: React.FC<Props> = (props: Props) => {
     })
   }
 
-  const getStatus = (): ReactElement => <FaRegCheckCircle color="red" />
+  const getStatus = (): ReactElement =>
+    error
+      ? <FaRegTimesCircle data-testid={`${props.name}-status-icon-error`} color="red" />
+      : <FaRegCheckCircle data-testid={`${props.name}-status-icon-success`} color="green" />
 
-  const getTitle = (): string => error
+  const getTitle = (): string => error || 'Tudo certo'
 
   return (
     <div className={Styles.inputWrap}>

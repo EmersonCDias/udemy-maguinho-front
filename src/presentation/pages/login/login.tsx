@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
+import { Authentication } from '../../../domain/usecases/authenticantion'
 import { Validation } from '../../protocols/validation'
 import FormContext from '../../contexts/form/form-context'
 import LoginHeader from '../../components/login-header/login-header'
@@ -10,38 +11,60 @@ import Styles from './login-styles.scss'
 
 type Props = {
   validation: Validation
+  authentication: Authentication
 }
 
-const Login: React.FC<Props> = ({ validation }: Props) => {
+const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
   const [state, setState] = useState({
     isLoading: false,
     email: '',
     password: '',
-    emailError: 'Campo obrigatório',
-    passwordError: 'Campo obrigatório',
+    emailError: '',
+    passwordError: '',
     mainError: ''
   })
 
   useEffect(() => {
-    validation.validate({ email: state.email })
-  }, [state.email])
+    setState({
+      ...state,
+      emailError: validation.validate('email', state.email),
+      passwordError: validation.validate('password', state.password)
+    })
+  }, [state.email, state.password])
 
-  useEffect(() => {
-    validation.validate({ password: state.password })
-  }, [state.password])
+  const handleOnSubmit = useCallback(async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
+    event.preventDefault()
+
+    setState({
+      ...state,
+      isLoading: true
+    })
+
+    await authentication.auth({
+      email: state.email,
+      password: state.password
+    })
+  }, [state])
 
   return (
     <div className={Styles.login}>
       <LoginHeader />
 
       <FormContext.Provider value={{ state, setState }}>
-        <form action="" className={Styles.form}>
+        <form action="" className={Styles.form} onSubmit={handleOnSubmit}>
           <h2>Login</h2>
 
           <Input type="email" name="email" placeholder="Digite seu email" />
           <Input type="password" name="password" placeholder="Digite sua senha" />
 
-          <button disabled data-testid="submit" type="submit" className={Styles.submit}>Entrar</button>
+          <button
+            disabled={!!state.emailError || !!state.passwordError}
+            data-testid="submit"
+            type="submit"
+            className={Styles.submit}
+          >
+            Entrar
+          </button>
 
           <span className={Styles.link}>Criar conta</span>
 
