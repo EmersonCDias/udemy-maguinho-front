@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-07-15T21:26:54.001Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="zcuBmY6g3jXxfE-DoM5S" version="14.8.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-07-21T12:36:32.390Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="t541nCfUv1W21-pP9Fke" version="14.8.6" type="github" pages="2">
   <diagram id="Rcwsei1Vdp0CUrpZztXG" name="Example">
-    <mxGraphModel dx="2246" dy="2037" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="786" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -134,93 +134,93 @@
         <mxCell id="U6v5zSt5nyvCWWzOIKLv-49" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FF8000;align=right;fillColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="50" y="1220" width="1800" height="2240" as="geometry" />
         </mxCell>
-        <mxCell id="U6v5zSt5nyvCWWzOIKLv-50" value="&lt;h1&gt;Anotacoes&lt;/h1&gt;&lt;p&gt;a&lt;span&gt;**************************************************************************************************&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Clean Archtecture&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;- Dependencia unica entre camadas&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Main Layer (Possui alguns design patterns)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Composition root&lt;span&gt;	&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Factories&lt;span&gt;	&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Dependencie Injection&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Domain Layer (Interface)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Regras de negocio&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Nao depende de ninguem&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex: Authentication&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Data Layer (Classe)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Implementacao dos casos de uso&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Trata as respostas da API&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Trata os erros da API&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Infra Layer (Dependencias externas)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Comunicar com a API&lt;span&gt;	&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex: Axios&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Presentation Layer (View Model)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Coverte os dados no formato que a tela precisa&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Controla o estado&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Navegacao&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Gravar dados no cache&lt;/p&gt;&lt;p&gt;&amp;nbsp; - No caso do React, manteremos a camada de UI dentro de Presentation, por conta dos hooks.&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex:&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;UI Layer (nao utilizaremos)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Renderiza a View&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;UI Layer (nao utilizaremos)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Renderiza a View&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; - No caso do React, manteremos a camada de UI dentro de Presentation, por conta dos hooks.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;Design Patterns&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;Composed (Ex: validation compesed)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Compoe todas as regras pequenas validacoes para injetar no Login&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex: Contem as regras de validacao que o Login precisa&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Composition root&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ponto de entrada da aplicacao&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Acoplar essa camada com todas as outras para deixar as demais desacopladas&lt;/p&gt;&lt;p&gt;&lt;span&gt;	&lt;/span&gt;- Ele se sacrificar para manter o sistema limpo&lt;/p&gt;&lt;p&gt;&lt;span&gt;	&lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Factories&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; - Classes que geram instancias de outras classes (para ter acesso a todos os componentes do meu sistema)&lt;/p&gt;&lt;p&gt;&lt;span&gt;	&lt;/span&gt;- Ex: Login factory&lt;/p&gt;&lt;p&gt;&lt;span&gt;	&lt;/span&gt;&amp;nbsp; - Tem acesso ao AxiosHTTPCliente, EmailFieldValidation&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Dependencie Injection&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex: No Login, nao devemos criar uma instancia das nossas dependencias (ex: RequiredFieldValidation), ela deve ser injetada e eu apenas abstraio&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Decorator&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Adicionar funcionalidade no componente sem altera-lo no futuro&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Permite que inclua funcionalidade na instancia de um objeto sem precisar alterar o proprio objeto&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;SOLID&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;Single Responsability&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Cada um com sua responsabilidade&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Interface Segregation Principle&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Nao devemos criar interfaces com varios metodos&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Fica mais facil de fazer a composicao dos objetos (alem de mais facil de testar)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Dependency invertion principle (boundarie - fronteira da camada de apresentacao)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Cria uma inteface em inverto a dependencia, ao inves de importar diretamente a dependencia&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;" parent="1" vertex="1">
+        <mxCell id="U6v5zSt5nyvCWWzOIKLv-50" value="&lt;h1&gt;Anotacoes&lt;/h1&gt;&lt;p&gt;a&lt;span&gt;**************************************************************************************************&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Clean Archtecture&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;- Dependencia unica entre camadas&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Main Layer (Possui alguns design patterns)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Composition root&lt;span&gt; &lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Factories&lt;span&gt; &lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Dependencie Injection&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Domain Layer (Interface)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Regras de negocio&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Nao depende de ninguem&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex: Authentication&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Data Layer (Classe)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Implementacao dos casos de uso&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Trata as respostas da API&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Trata os erros da API&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Infra Layer (Dependencias externas)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Comunicar com a API&lt;span&gt; &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex: Axios&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Presentation Layer (View Model)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Coverte os dados no formato que a tela precisa&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Controla o estado&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Navegacao&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Gravar dados no cache&lt;/p&gt;&lt;p&gt;&amp;nbsp; - No caso do React, manteremos a camada de UI dentro de Presentation, por conta dos hooks.&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex:&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;UI Layer (nao utilizaremos)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Renderiza a View&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;UI Layer (nao utilizaremos)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Renderiza a View&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp; - No caso do React, manteremos a camada de UI dentro de Presentation, por conta dos hooks.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;Design Patterns&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;Composed (Ex: validation compesed)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Compoe todas as regras pequenas validacoes para injetar no Login&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex: Contem as regras de validacao que o Login precisa&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Composition root&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ponto de entrada da aplicacao&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Acoplar essa camada com todas as outras para deixar as demais desacopladas&lt;/p&gt;&lt;p&gt;&lt;span&gt; &lt;/span&gt;- Ele se sacrificar para manter o sistema limpo&lt;/p&gt;&lt;p&gt;&lt;span&gt; &lt;/span&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Factories&lt;/p&gt;&lt;p&gt;&amp;nbsp; &amp;nbsp; - Classes que geram instancias de outras classes (para ter acesso a todos os componentes do meu sistema)&lt;/p&gt;&lt;p&gt;&lt;span&gt; &lt;/span&gt;- Ex: Login factory&lt;/p&gt;&lt;p&gt;&lt;span&gt; &lt;/span&gt;&amp;nbsp; - Tem acesso ao AxiosHTTPCliente, EmailFieldValidation&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Dependencie Injection&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Ex: No Login, nao devemos criar uma instancia das nossas dependencias (ex: RequiredFieldValidation), ela deve ser injetada e eu apenas abstraio&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Decorator&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Adicionar funcionalidade no componente sem altera-lo no futuro&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Permite que inclua funcionalidade na instancia de um objeto sem precisar alterar o proprio objeto&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;SOLID&lt;/p&gt;&lt;p&gt;**************************************************************************************************&lt;/p&gt;&lt;p&gt;Single Responsability&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Cada um com sua responsabilidade&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Interface Segregation Principle&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Nao devemos criar interfaces com varios metodos&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Fica mais facil de fazer a composicao dos objetos (alem de mais facil de testar)&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Dependency invertion principle (boundarie - fronteira da camada de apresentacao)&lt;/p&gt;&lt;p&gt;&amp;nbsp; - Cria uma inteface em inverto a dependencia, ao inves de importar diretamente a dependencia&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;" parent="1" vertex="1">
           <mxGeometry x="80" y="1250" width="1740" height="2180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="r8DbTxaN4geT9BTR6fFk" name="Page-2">
-    <mxGraphModel dx="786" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1331" dy="951" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="Y0bYMo4KFqllTDXJqcth-0" />
         <mxCell id="Y0bYMo4KFqllTDXJqcth-1" parent="Y0bYMo4KFqllTDXJqcth-0" />
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-0" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00CC00;fillColor=#99FF99;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-0" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00CC00;fillColor=#99FF99;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="690" y="660" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-1" value="Data Layer" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-1" value="Data Layer" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="990" y="640" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-3" target="DXiuhtw1lmpVtGzt70nc-11">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-3" target="DXiuhtw1lmpVtGzt70nc-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-3" value="RemoteAuthentication" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-3" value="RemoteScheduledOrder" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="904" y="710" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-4" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-4" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="500" y="1050" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-5" value="Interfaces" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-5" value="Interfaces" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="655" y="1060" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-6" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00CCCC;fillColor=#66FFFF;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-6" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#00CCCC;fillColor=#66FFFF;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="690" y="830" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-7" value="Domain" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-7" value="Domain" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1000" y="810" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-8" value="Authentication" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-8" value="ScheduledOrder" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="810" y="880" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-9" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="500" y="1105" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-10" value="Classe" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-10" value="Classe" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="655" y="1115" width="50" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-11" value="HttpPostClient" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-11" value="HttpPostClient" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="710" y="710" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-3" target="DXiuhtw1lmpVtGzt70nc-8">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-3" target="DXiuhtw1lmpVtGzt70nc-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-13" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CC0066;fillColor=#FFCCE6;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-13" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CC0066;fillColor=#FFCCE6;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="695" y="490" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-14" value="Infra" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-14" value="Infra" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1025" y="470" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-17" target="DXiuhtw1lmpVtGzt70nc-18">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-17" target="DXiuhtw1lmpVtGzt70nc-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-17" target="DXiuhtw1lmpVtGzt70nc-11">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-17" target="DXiuhtw1lmpVtGzt70nc-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-17" value="RemoteAuthentication" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-17" value="RemoteScheduledOrder" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="810" y="540" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-18" value="Axios" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-18" value="Axios" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="515" y="540" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-19" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5CCFF;strokeColor=#CC00CC;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-19" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E5CCFF;strokeColor=#CC00CC;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1110" y="830" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-20" value="Presentation&lt;br&gt;" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-20" value="Presentation&lt;br&gt;" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1400" y="810" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-22" target="DXiuhtw1lmpVtGzt70nc-8">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-22" target="DXiuhtw1lmpVtGzt70nc-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-22" value="Login" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-22" value="Form" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1130" y="880" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#CCCC00;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#CCCC00;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1110" y="660" width="370" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-24" value="Validation" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-24" value="Validation" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1410" y="640" width="70" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-26" target="DXiuhtw1lmpVtGzt70nc-29">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-26" target="DXiuhtw1lmpVtGzt70nc-29" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1390" y="790" />
@@ -228,10 +228,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-26" value="RequiredFieldValidation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-26" value="RequiredFieldValidation" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1317" y="710" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-28" target="DXiuhtw1lmpVtGzt70nc-29">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="Y0bYMo4KFqllTDXJqcth-1" source="DXiuhtw1lmpVtGzt70nc-28" target="DXiuhtw1lmpVtGzt70nc-29" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1210" y="820" />
@@ -239,25 +239,25 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-28" value="EmailFiledValidation" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-28" value="FormFieldValidation" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1140" y="710" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-29" value="Validation" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-29" value="Validation" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1320" y="880" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-30" value="" style="rounded=0;whiteSpace=wrap;html=1;align=right;strokeColor=#FF8000;fillColor=#FFE6CC;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-30" value="" style="rounded=0;whiteSpace=wrap;html=1;align=right;strokeColor=#FF8000;fillColor=#FFE6CC;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1570" y="490" width="220" height="480" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-31" value="Main" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-31" value="Main" style="text;html=1;align=right;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1750" y="470" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-32" value="LoginFactory" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-32" value="LoginFactory" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1610" y="570" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-33" value="Index" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-33" value="Index" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1610" y="510" width="140" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="DXiuhtw1lmpVtGzt70nc-34" value="Dependency Injection" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="Y0bYMo4KFqllTDXJqcth-1">
+        <mxCell id="DXiuhtw1lmpVtGzt70nc-34" value="Dependency Injection" style="rounded=0;whiteSpace=wrap;html=1;" parent="Y0bYMo4KFqllTDXJqcth-1" vertex="1">
           <mxGeometry x="1610" y="630" width="140" height="40" as="geometry" />
         </mxCell>
       </root>
