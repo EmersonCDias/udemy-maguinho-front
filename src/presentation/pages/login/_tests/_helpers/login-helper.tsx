@@ -38,15 +38,6 @@ export const makeSut = (params?: SutParams): SutTypes => {
   }
 }
 
-export const simulateStatusForField = (
-  sut: RenderResult,
-  fieldName: string,
-  validationError?: string
-): void => {
-  const fieldStatus = sut.getByTestId(`${fieldName}-status`)
-  expect(fieldStatus.title).toBe(validationError || 'Tudo certo')
-}
-
 export const populateEmailField = (
   sut: RenderResult,
   email = faker.internet.email()
@@ -73,4 +64,18 @@ export const simulateValidSubmit = (
 
   const submitButton = sut.getByTestId('submit')
   fireEvent.click(submitButton)
+}
+
+export const simulateStatusForField = (
+  sut: RenderResult,
+  fieldName: string,
+  validationError?: string
+): void => {
+  const fieldStatus = sut.getByTestId(`${fieldName}-status`)
+  // const validationIcon = validationError
+  //   ? sut.getByTestId(`${fieldName}-status-icon-error`)
+  //   : sut.getByTestId(`${fieldName}-status-icon-success`)
+
+  expect(fieldStatus.title).toBe(validationError || 'Tudo certo')
+  // expect(fieldStatus.firstElementChild).toBe(validationIcon)
 }

@@ -8,6 +8,7 @@ import Footer from '../../components/footer/footer'
 import Input from '../../components/input/input'
 import FormStatus from '../../components/form-status/form-status'
 import Styles from './login-styles.scss'
+// import { InvalidCredentialsError } from '../../../domain/errors/invalid-crendentials-error'
 
 type Props = {
   validation: Validation
@@ -21,7 +22,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
     password: '',
     emailError: '',
     passwordError: '',
-    mainError: ''
+    apiError: ''
   })
 
   useEffect(() => {
@@ -35,15 +36,28 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
   const handleOnSubmit = useCallback(async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault()
 
-    setState({
-      ...state,
-      isLoading: true
-    })
+    try {
+      if (state.isLoading || state.emailError || state.passwordError) return
 
-    await authentication.auth({
-      email: state.email,
-      password: state.password
-    })
+      setState({
+        ...state,
+        isLoading: true,
+        apiError: ''
+      })
+
+      const account = await authentication.auth({
+        email: state.email,
+        password: state.password
+      })
+
+      localStorage.setItem('accessToken', account.accessToken)
+    } catch (error) {
+      setState({
+        ...state,
+        apiError: error.message,
+        isLoading: false
+      })
+    }
   }, [state])
 
   return (
@@ -51,7 +65,7 @@ const Login: React.FC<Props> = ({ validation, authentication }: Props) => {
       <LoginHeader />
 
       <FormContext.Provider value={{ state, setState }}>
-        <form action="" className={Styles.form} onSubmit={handleOnSubmit}>
+        <form data-testid="login-form" action="" className={Styles.form} onSubmit={handleOnSubmit}>
           <h2>Login</h2>
 
           <Input type="email" name="email" placeholder="Digite seu email" />

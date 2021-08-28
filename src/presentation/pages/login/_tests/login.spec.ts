@@ -1,5 +1,6 @@
-import { cleanup } from '@testing-library/react'
+import { cleanup, fireEvent, waitFor } from '@testing-library/react'
 import faker from 'faker'
+import 'jest-localstorage-mock'
 
 import {
   simulateValidSubmit,
@@ -8,9 +9,14 @@ import {
   populateEmailField,
   makeSut
 } from './_helpers/login-helper'
+import { InvalidCredentialsError } from '../../../../domain/errors/invalid-crendentials-error'
 
 describe('Login', () => {
   afterEach(cleanup)
+
+  beforeEach(() => {
+    localStorage.clear()
+  })
 
   test('should start with initial state', () => {
     const { sut, validationStub } = makeSut({
@@ -77,7 +83,7 @@ describe('Login', () => {
     expect(submitButton.disabled).toBe(false)
   })
 
-  test('should show loading on submit', () => {
+  test('should show spinner on submit', () => {
     const { sut } = makeSut()
 
     simulateValidSubmit(sut)
@@ -86,7 +92,7 @@ describe('Login', () => {
     expect(spinner).toBeTruthy()
   })
 
-  test('should call authentication with correct values', () => {
+  test('should call Authentication with correct values', () => {
     const { sut, authenticationSpy } = makeSut()
 
     const email = faker.internet.email()
@@ -98,5 +104,53 @@ describe('Login', () => {
       email,
       password
     })
+  })
+
+  test('should call Authentication only once', () => {
+    const { sut, authenticationSpy } = makeSut()
+
+    simulateValidSubmit(sut)
+    simulateValidSubmit(sut)
+
+    expect(authenticationSpy.callsCount).toBe(1)
+  })
+
+  test('should call Authentication if form is invalid', () => {
+    const validationError = faker.random.words()
+    const { sut, authenticationSpy } = makeSut({ validationError })
+
+    populateEmailField(sut)
+
+    fireEvent.submit(sut.getByTestId('login-form'))
+
+    expect(authenticationSpy.callsCount).toBe(0)
+  })
+
+  test('should present error if Authentication fails', async () => {
+    const { sut, authenticationSpy } = makeSut()
+    const error = new InvalidCredentialsError()
+
+    jest.spyOn(authenticationSpy, 'auth')
+      .mockReturnValueOnce(Promise.reject(error))
+
+    simulateValidSubmit(sut)
+
+    const formStatusWrap = sut.getByTestId('form-status-wrap')
+    await waitFor(() => formStatusWrap)
+
+    // const apiError = sut.getByTestId('api-error')
+
+    // expect(apiError.textContent).toBe(error.message)
+    expect(formStatusWrap.childElementCount).toBe(1)
+  })
+
+  test('should add accessToken to localStorage on success', async () => {
+    const { sut, authenticationSpy } = makeSut()
+
+    simulateValidSubmit(sut)
+
+    await waitFor(() => sut.getByTestId('login-form'))
+
+    expect(localStorage.setItem).toHaveBeenCalledWith('accessToken', authenticationSpy.account.accessToken)
   })
 })
